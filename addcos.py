@@ -46,6 +46,8 @@ def sim_mult(s, t, C):
     '''
     n = C.shape[0]
     left = pcos(s, t)
+    if n == 0:
+        return left
     right = np.prod(pcos(s, C.T))
     return (left * right)**(n+1)
 
@@ -61,6 +63,8 @@ def sim_add(s, t, C):
     '''
     n = C.shape[0]
     left = np.dot(s, t)  # assumes already normalized
+    if n == 0:
+        return left
     right = np.sum(np.dot(s, C.T))
     return (left + right) / (n + 1)
 
