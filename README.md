@@ -20,7 +20,7 @@ label, i.e. `bug.N`:
 
 ```
 
-Script usage:
+### Script usage:
 
 ```
 python lexsub_addcos_ppdb.py <LEXSUBFILE> <PPDBFILE> <EMBEDDINGFILE> <OUTFILE> [<MINSCORE>]
@@ -33,3 +33,13 @@ destination file to write the results.
  
 Optionally specify a `MINSCORE` which is the minimum PPDB score for a paraphrase to be 
 considered a potential substitute.
+
+### Note
+
+This code provides the implementation of the AddCos metric as used in the paper:
+
+```
+Marianna Apidianaki, Guillaume Wisniewski, Anne Cocos, and Chris Callison-Burch. 2018. Automated Paraphrase Lattice Creation for HyTER Machine Translation Evaluation. In Proceedings of NAACL 2018 (Short Papers). New Orleans, LA.
+```
+
+If you are looking for a full implementation of the `hytera` pipeline from that paper (in which this code is just part of the pipeline), you can find it [here](https://github.com/acocos/pp-lexsub-hytera/).
